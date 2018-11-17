@@ -23,4 +23,4 @@ clean:
 	$(RM) -rf $(TARGET)
 
 test:
-	./$(TARGET)
+	./$(TARGET)2
