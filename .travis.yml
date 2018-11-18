@@ -6,4 +6,6 @@ os: linux
 
 compiler: gcc
 
+python: 3.6
+
 script: make && make test
