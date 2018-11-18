@@ -6,14 +6,12 @@ os: linux
 
 compiler: gcc
 
-python: 3.6
-
 before_script:
     - python --version
     - python3 --version
     - ls
     - |
-      cat << EOF > config.mak
+      cat <<EOF > config.mak
       HARCH=linux-x86_64
       ARCHES +=
       USE_CXX11_default=NO
@@ -21,5 +19,5 @@ before_script:
       EOF
     - ls
     - cat config.mak
-    
+
 script: make && make test
