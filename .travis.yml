@@ -11,12 +11,12 @@ before_script:
     - python3 --version
     - ls
     - |
-      cat <<-EOF > config.mak
-      HARCH=linux-x86_64
-      ARCHES +=
-      USE_CXX11_default=NO
-      INSTALL_DIR=/usr/local/cpsw
-      EOF
+cat <<-EOF > config.mak
+HARCH=linux-x86_64
+ARCHES +=
+USE_CXX11_default=NO
+INSTALL_DIR=/usr/local/cpsw
+EOF
     - ls
     - cat config.mak
 
