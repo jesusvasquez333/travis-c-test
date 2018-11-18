@@ -8,4 +8,18 @@ compiler: gcc
 
 python: 3.6
 
+before_script:
+    - python --version
+    - python3 --version
+    - ls
+    - |
+      cat << EOF > config.mak
+      HARCH=linux-x86_64
+      ARCHES +=
+      USE_CXX11_default=NO
+      INSTALL_DIR=/usr/local/cpsw
+      EOF
+    - ls
+    - cat config.mak
+    
 script: make && make test
