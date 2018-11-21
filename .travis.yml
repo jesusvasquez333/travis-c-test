@@ -25,7 +25,13 @@ after_success:
     # Create documentation that will be deployed:
     - echo "Generating documentation..."
     - mkdir html
-    - echo "# Deployed documentation" >> html/index.md
+    - echo "# Deployed documentation"            >> html/index.md
+    - echo "This is the deployed documentation." >> html/index.md
+    - echo "## Links"                            >> html/index.md
+    - echo "[page 1](page1.md)"                  >> html/index.md
+
+    - echo "# Page 1"          >> page1.md
+    - echo "Content of page 1" >> page1.md
     # - echo "<h1>Deployed documentation</h1>"   >> html/index.html
     # - echo "<a href=\"index.html\">page 1</a>" >> html/index.html
     # - echo "<h2>page 1...</h2>" >> html/page1.html
