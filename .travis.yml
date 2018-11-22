@@ -21,7 +21,7 @@ before_script:
 
 script: make && make test
 
-after_success:
+before_deploy:
     # Create documentation that will be deployed:
     - echo "Generating documentation..."
     - mkdir html
@@ -39,9 +39,9 @@ after_success:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github-token: $GITHUB_TOKEN
   keep-history: true
   local-dir: html
   on:
-    # branch: master
     all_branches: true
+    tags: true
