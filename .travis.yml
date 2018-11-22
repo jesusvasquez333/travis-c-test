@@ -43,4 +43,5 @@ deploy:
   keep-history: true
   local-dir: html
   on:
-    branch: master
+    # branch: master
+    all_branches: true
